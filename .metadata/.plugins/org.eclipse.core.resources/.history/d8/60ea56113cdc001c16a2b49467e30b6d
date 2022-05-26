@@ -1,6 +1,6 @@
 package jogoforca;
 
-import palavras.Dictionary;
+import java.util.Dictionary;
 import palavras.word;
 
 public class Game {

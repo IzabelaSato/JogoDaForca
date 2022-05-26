@@ -10,4 +10,6 @@
     <fullyQualifiedTypeName name="jogoforca.GameException"/>
     <fullyQualifiedTypeName name="java.util.Random"/>
     <fullyQualifiedTypeName name="jogoforca.utils.RandomUtils"/>
+    <fullyQualifiedTypeName name="java.util.Dictionary"/>
+    <fullyQualifiedTypeName name="palavras.Dictionary"/>
 </qualifiedTypeNameHistroy>

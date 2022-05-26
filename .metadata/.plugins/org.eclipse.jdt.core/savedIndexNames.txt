@@ -6,14 +6,15 @@ INDEX VERSION 1.131+D:\DEV\Java\JogoDaForca\.metadata\.plugins\org.eclipse.jdt.c
 1331820029.index
 2764561065.index
 3965249010.index
-1865797976.index
 2229891246.index
+1865797976.index
 4164722156.index
 1922431822.index
 1722988385.index
 2187230582.index
 993575454.index
 2454163248.index
+4140928472.index
 2271978752.index
 3203767126.index
 3426676585.index
