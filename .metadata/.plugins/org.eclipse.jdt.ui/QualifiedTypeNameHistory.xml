@@ -4,7 +4,6 @@
     <fullyQualifiedTypeName name="java.util.HashSet"/>
     <fullyQualifiedTypeName name="java.util.Set"/>
     <fullyQualifiedTypeName name="palavras.word"/>
-    <fullyQualifiedTypeName name="java.util.Scanner"/>
     <fullyQualifiedTypeName name="java.util.List"/>
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="jogoforca.GameException"/>
@@ -12,4 +11,6 @@
     <fullyQualifiedTypeName name="jogoforca.utils.RandomUtils"/>
     <fullyQualifiedTypeName name="java.util.Dictionary"/>
     <fullyQualifiedTypeName name="palavras.Dictionary"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="jogoforca.InvalidCharacterExeception"/>
 </qualifiedTypeNameHistroy>
