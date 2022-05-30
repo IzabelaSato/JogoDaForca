@@ -15,7 +15,7 @@ public class Game {
 		Dictionary dictionary = Dictionary.getInstance();
 		word word = dictionary.nextWord();
 		
-		UI.print("A palavra tem " + word.size()+ " letras");
+		UI.print("A palavra tem " + word.size()+ "letras");
 		
 		Set<Character> usedChars = new HashSet<>();
 		int errorCount = 0;

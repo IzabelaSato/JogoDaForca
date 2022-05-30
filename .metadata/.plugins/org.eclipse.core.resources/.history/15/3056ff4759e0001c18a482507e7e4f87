@@ -1,0 +1,16 @@
+package jogoforca;
+
+import palavras.Dictionary;
+import palavras.word;
+
+public class Game {
+	
+	public void start() {
+		UI.print(("Bem vindo ao jogo da Forca");
+				
+		Dictionary dictionary = Dictionary.getInstance();
+		word word = dictionary.nextWord();
+		
+		UI.print("A palavra tem " + word.size()+ "letras");
+	}
+}
