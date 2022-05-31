@@ -1,5 +1,0 @@
-package jogoforca;
-
-public class GameException extends RuntimeException {
-
-}

@@ -7,6 +7,8 @@ import java.util.Set;
 
 public class Game {
 	
+	public static final int MAX_ERROS = 5;
+	
 	public void start() {
 		UI.print("Bem vindo ao jogo da Forca");
 				
@@ -17,9 +19,6 @@ public class Game {
 		
 		Set<Character> usedChars = new HashSet<>();
 		int errorCount = 0;
-		
-		int maxErrors = Integer.parseInt (Config.get("maxErrors"));
-		UI.print("Você pode errar no máximo " + maxErrors + " vez(es)");
 		
 		while (true) {
 			UI.print(word);
@@ -41,8 +40,8 @@ public class Game {
 					
 					errorCount++;
 					
-					if (errorCount < maxErrors){
-						UI.print("Você errou! Você ainda pode errar " + (maxErrors - errorCount) + " vez(es)");
+					if (errorCount < MAX_ERROS){
+						UI.print("Você errou! Você ainda pode errar " + (MAX_ERROS - errorCount) + " vez(es)");
 						
 					}
 					
@@ -55,7 +54,7 @@ public class Game {
 					break;
 				}
 				
-				if (errorCount == maxErrors) {
+				if (errorCount == MAX_ERROS) {
 					UI.print("Você perdeu o jogo!!  A palavra correta era: " + word.getOriginalWord());
 					UI.print("Fim de Jogo!");
 					break;

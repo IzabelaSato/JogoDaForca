@@ -19,7 +19,7 @@ public class Game {
 		int errorCount = 0;
 		
 		int maxErrors = Integer.parseInt (Config.get("maxErrors"));
-		UI.print("Você pode errar no máximo " + maxErrors + " vez(es)");
+		UI.print("Você pode errar no máximo" + maxErrors + "vez(es)");
 		
 		while (true) {
 			UI.print(word);
