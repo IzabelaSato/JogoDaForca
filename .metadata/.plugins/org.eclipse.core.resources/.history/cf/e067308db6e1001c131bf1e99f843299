@@ -20,10 +20,6 @@ public class Game {
 		Set<Character> usedChars = new HashSet<>();
 		int errorCount = 0;
 		
-		if(args.length>0) {
-			Config.setMaxErrors(args[0]);
-		}
-		
 		int maxErrors = Integer.parseInt (Config.get("maxErrors"));
 		UI.print("Você pode errar no máximo " + maxErrors + " vez(es)");
 		
@@ -49,7 +45,9 @@ public class Game {
 					
 					if (errorCount < maxErrors){
 						UI.print("Você errou! Você ainda pode errar " + (maxErrors - errorCount) + " vez(es)");
-					}	
+						
+					}
+					
 				}
 				UI.printNewLine();
 				
@@ -68,6 +66,7 @@ public class Game {
 			}catch (InvalidCharacterExeception e) {
 				UI.print("Erro: " + e.getMessage());
 				UI.printNewLine();
+				
 			}
 		}
 	}

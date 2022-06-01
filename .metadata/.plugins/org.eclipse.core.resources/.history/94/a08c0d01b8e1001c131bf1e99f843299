@@ -19,6 +19,6 @@ public class Config {
 	}
 	
 	public static void setMaxErrors (String maxErrors) {
-		props.setProperty("maxErrors", maxErrors);
+		props.setProperty("maxErros", maxErrors);
 	}
 }
