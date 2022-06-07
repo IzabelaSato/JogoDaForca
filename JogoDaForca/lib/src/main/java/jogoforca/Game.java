@@ -6,70 +6,69 @@ import java.util.HashSet;
 import java.util.Set;
 
 public class Game {
-	
-	public void start(String [] args) {
+
+	public void start(String[] args) {
 		UI.print(" -------------------------- ");
 		UI.print("|      Jogo da Forca       |");
 		UI.print(" -------------------------- ");
-		
+
 		Dictionary dictionary = Dictionary.getInstance();
 		word word = dictionary.nextWord();
-		
-		UI.print("A palavra tem " + word.size()+ " letras");
-		
+
+		UI.print("A palavra tem " + word.size() + " letras");
+
 		Set<Character> usedChars = new HashSet<>();
 		int errorCount = 0;
-		
-		if(args.length>0) {
+
+		if (args.length > 0) {
 			Config.setMaxErrors(args[0]);
 		}
-		
-		int maxErrors = Integer.parseInt (Config.get("maxErrors"));
+
+		int maxErrors = Integer.parseInt(Config.get("maxErrors"));
 		UI.print("Você pode errar no máximo " + maxErrors + " vez(es)");
-		
+
 		while (true) {
 			UI.print(word);
 			UI.printNewLine();
-			
+
 			char c;
-			try{
+			try {
 				c = UI.readChar("Digite uma Letra: ");
-				
+
 				if (usedChars.contains(c)) {
-					throw new InvalidCharacterExeception ("Esta letra já foi utilizada");
+					throw new InvalidCharacterExeception("Esta letra já foi utilizada");
 				}
-				
+
 				usedChars.add(c);
-				
-				if(word.hasChar(c)) {
+
+				if (word.hasChar(c)) {
 					UI.print("Você acertou uma letra!");
-				}else {
-					
+				} else {
+
 					errorCount++;
-					
-					if (errorCount < maxErrors){
+
+					if (errorCount < maxErrors) {
 						UI.print("Você errou! Você ainda pode errar " + (maxErrors - errorCount) + " vez(es)");
-					}	
+					}
 				}
 				UI.printNewLine();
-				
-				if(word.discovered()) {
+
+				if (word.discovered()) {
 					UI.print("PARABÉNS!!  Você acertou a palavra correta: " + word.getOriginalWord());
 					UI.print("Fim de Jogo!");
 					break;
 				}
-				
+
 				if (errorCount == maxErrors) {
 					UI.print("Você perdeu o jogo!!  A palavra correta era: " + word.getOriginalWord());
 					UI.print("Fim de Jogo!");
 					break;
-				}	
-				
-			}catch (InvalidCharacterExeception e) {
+				}
+
+			} catch (InvalidCharacterExeception e) {
 				UI.print("Erro: " + e.getMessage());
 				UI.printNewLine();
 			}
 		}
 	}
 }
-
