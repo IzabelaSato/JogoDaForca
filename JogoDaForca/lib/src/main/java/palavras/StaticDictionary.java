@@ -5,7 +5,7 @@ import java.util.List;
 public class StaticDictionary extends Dictionary {
 
 	private List<String> words = List.of("casa", "computador", "caneta", "carro");
-	private int currentIndex;
+	private int currentIndex = -1;
 
 	@Override
 	public word nextWord() {
@@ -17,5 +17,4 @@ public class StaticDictionary extends Dictionary {
 	public String getName() {
 		return "Estático";
 	}
-
 }

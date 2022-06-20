@@ -18,7 +18,8 @@ public class FileDictionary extends Dictionary {
 	}
 
 	private void load() {
-		try (Scanner scanner = new Scanner(getClass().getResourceAsStream("/" + FILE_NAME))) {
+		try (Scanner scanner = 
+				new Scanner(getClass().getResourceAsStream("/" + FILE_NAME))) {
 
 			while (scanner.hasNextLine()) {
 				String word = scanner.nextLine().trim();

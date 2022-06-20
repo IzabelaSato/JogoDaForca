@@ -1,5 +1,0 @@
-package jogoforca;
-
-public class InvalidCharacterExeception extends Exception {
-
-}
